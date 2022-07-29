@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Title</title>
+    <style>
+        /*tailwind의 기본 스타일, 플러그인의 기본 스타일을 주입*/
+        @tailwind base;
+        /*tailwind의 컴포넌트 스타일, 플러그인의 컴포넌트 스타일을 주입*/
+        @tailwind components;
+
+        :root {
+            font-size: 16px;
+            font-family: sans-serif;
+        }
+
+        table {
+            @apply border-collapse tracking-widest mx-4;
+        }
+
+        .stroke-base {
+            @apply border-solid border-2 border-slate-500
+        }
+
+        td {
+            @apply text-center
+        }
+
+        .layout {
+            @apply h-screen flex justify-center items-center
+        }
+
+        .res-padding {
+            @apply p-1 sm:p-2 md:p-3 lg:p-4
+        }
+
+        .res-font {
+            @apply text-xs sm:text-sm md:text-base lg:text-lg
+        }
+    </style>
+</head>
+<body>
+<main class="layout">
+    <table class="stroke-base res-font">
+        <colgroup>
+            <col>
+            <col span="2">
+            <col span="2">
+        </colgroup>
+        <tr>
+            <th class="res-padding" scope="col">Lorem ipsum dolor sit amet, consectetur</th>
+            <th class="res-padding" scope="col">adipisicing elit. Ad assumenda consectetur</th>
+            <th class="res-padding" scope="col"> cum cupiditate doloremque dolores eos est</th>
+            <th class="res-padding" scope="col">facilis hic maiores quam qui repudiandae similique</th>
+        </tr>
+        <tr>
+            <td class="res-padding">Smarts</td>
+            <td class="res-padding">Dex, acrobat</td>
+            <td class="res-padding">Super speed</td>
+            <td class="res-padding">Super speed</td>
+        </tr>
+    </table>
+</main>
+</body>
+</html>
